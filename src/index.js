@@ -50,7 +50,7 @@ class Comment extends Component{
         })
             .then((response)=>{
             console.log(response)
-                if (response.data.msg==true){
+                if (response.data.status==true){
                     alert("发表成功！")
                     //如果在最后一页，用户发表评论，则获取最后一页的评论数据，更新显示
                     axios.get('http://119.28.24.179:8081/comments?page='+this.state.current_page)
